@@ -12,7 +12,7 @@ public class Main {
         Menu menu = new MainMenu();
 
         menu.renderOptions();
-        System.out.print("Selecione a opção desejada: ");
+        System.out.print("Select an option: ");
 
         menu.selectOption(scanner.next());
         menu.executeSelectedOption();
