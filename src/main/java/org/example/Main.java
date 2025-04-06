@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.foomenu.FooMenu;
 import org.example.mainmenu.MainMenu;
 import org.example.menu.Menu;
 
