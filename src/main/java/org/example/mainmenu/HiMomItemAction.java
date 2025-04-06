@@ -1,6 +1,6 @@
 package org.example.mainmenu;
 
-import org.example.menu.action.MenuItemAction;
+import org.example.menu.MenuItemAction;
 
 public class HiMomItemAction implements MenuItemAction {
     @Override

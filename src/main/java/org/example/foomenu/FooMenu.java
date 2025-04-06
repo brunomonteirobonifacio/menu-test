@@ -1,7 +1,7 @@
 package org.example.foomenu;
 
 import org.example.menu.BaseMenu;
-import org.example.menu.item.MenuItem;
+import org.example.menu.MenuItem;
 
 import java.util.List;
 

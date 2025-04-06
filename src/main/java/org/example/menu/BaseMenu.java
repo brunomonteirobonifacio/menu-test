@@ -1,8 +1,5 @@
 package org.example.menu;
 
-import org.example.menu.item.MenuItem;
-
-import java.lang.reflect.ParameterizedType;
 import java.util.*;
 
 public abstract class BaseMenu implements Menu {

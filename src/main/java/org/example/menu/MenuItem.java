@@ -1,6 +1,4 @@
-package org.example.menu.item;
-
-import org.example.menu.action.MenuItemAction;
+package org.example.menu;
 
 public class MenuItem {
     private final String option;

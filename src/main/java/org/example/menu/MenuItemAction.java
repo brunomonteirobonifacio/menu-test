@@ -1,4 +1,4 @@
-package org.example.menu.action;
+package org.example.menu;
 
 public interface MenuItemAction {
     void execute();
