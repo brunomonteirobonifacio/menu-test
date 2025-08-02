@@ -1,14 +1,16 @@
 package org.example.menu;
 
+import org.example.menu.engine.MenuEngine;
+
 public class MenuItem {
     private final String option;
     private final String description;
-    private final Class<? extends MenuItemAction> actionClass;
+    private final MenuItemAction action;
 
-    public MenuItem(String option, String description, Class<? extends MenuItemAction> actionClass) {
+    public MenuItem(String option, String description, MenuItemAction action) {
         this.option = option;
         this.description = description;
-        this.actionClass = actionClass;
+        this.action = action;
     }
 
     public String getOption() {
@@ -19,15 +21,7 @@ public class MenuItem {
         return description;
     }
 
-    public void execute() {
-        MenuItemAction menuItemAction;
-
-        try {
-            menuItemAction = actionClass.newInstance();
-        } catch (InstantiationException | IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-
-        menuItemAction.execute();
+    public void execute(MenuEngine engine) {
+        action.execute(engine);
     }
 }

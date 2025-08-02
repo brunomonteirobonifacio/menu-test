@@ -1,5 +1,7 @@
 package org.example.menu;
 
+import org.example.menu.engine.MenuEngine;
+
 import java.util.*;
 
 public abstract class BaseMenu implements Menu {
@@ -23,18 +25,19 @@ public abstract class BaseMenu implements Menu {
         }
     }
 
-    public void executeSelectedOption() {
+    @Override
+    public void executeSelectedOption(MenuEngine engine) {
         if (selectedItem == null) {
             throw new IllegalStateException("No item selected to execute");
         }
-        selectedItem.execute();
+        selectedItem.execute(engine);
     }
 
     public void selectOption(String option) {
         selectedItem = itemsByOption.get(option);
 
         if (selectedItem == null) {
-            throw new IllegalArgumentException("The selected option " + option + " does not exist");
+            throw new IllegalArgumentException("The selected option '" + option + "' does not exist");
         }
     }
 

@@ -1,17 +1,17 @@
 package org.example.foomenu;
 
-import org.example.menu.BaseMenu;
+import org.example.menu.AbstractMenu;
 import org.example.menu.MenuItem;
 
 import java.util.List;
 
-public class FooMenu extends BaseMenu {
+public class FooMenu extends AbstractMenu {
 
     @Override
     public List<MenuItem> getMenuItems() {
         return List.of(
-                new MenuItem("1", "Do bar", BarItemAction.class),
-                new MenuItem("2", "Do bar 2", BarItemAction.class)
+                new MenuItem("1", "Do bar", new BarItemAction()),
+                new MenuItem("2", "Do bar 2", new BarItemAction())
         );
     }
 }
