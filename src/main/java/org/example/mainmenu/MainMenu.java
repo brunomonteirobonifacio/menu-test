@@ -17,8 +17,9 @@ public class MainMenu extends AbstractMenu {
     @Override
     protected List<MenuItem> loadMenuItems() {
         return List.of(
-                new MenuItem("1", "Say Hello World", HelloWorldItemAction.class),
-                new MenuItem("2", "Say hi to mom", HiMomItemAction.class)
+                new MenuItem("1", "Say Hello World", new HelloWorldItemAction()),
+                new MenuItem("2", "Say hi to mom", new HiMomItemAction()),
+                new MenuItem("3", "Open Foo Menu", new OpenMenuAction(new FooMenu()))
         );
     }
 }
