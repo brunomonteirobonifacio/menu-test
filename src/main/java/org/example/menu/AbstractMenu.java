@@ -11,18 +11,22 @@ public abstract class AbstractMenu implements Menu {
 
     public AbstractMenu() {
         menuItems.addAll(loadMenuItems());
-        addExitAction();
+        addExitOption();
         menuItems.forEach(i -> itemsByOption.put(i.getOption(), i));
     }
 
-    public void renderOptions() {
-        customRenderOptions("[ %s ] %s");
+    private void addExitOption() {
+        removeMenuItemWithSameOptionAsExit();
+        menuItems.add(new MenuItem("x", "Exit", new ExitMenuAction()));
     }
 
-    public void customRenderOptions(String templateString) {
-        for (MenuItem menuItem : menuItems) {
-            System.out.printf(templateString + "\n", menuItem.getOption(), menuItem.getDescription());
-        }
+    private void removeMenuItemWithSameOptionAsExit() {
+        menuItems.removeIf(item -> item.getOption().equalsIgnoreCase("x"));
+    }
+
+    @Override
+    public List<MenuItem> getMenuItems() {
+        return menuItems;
     }
 
     @Override
