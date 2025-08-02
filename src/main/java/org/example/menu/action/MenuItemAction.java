@@ -1,4 +1,4 @@
-package org.example.menu;
+package org.example.menu.action;
 
 import org.example.menu.engine.MenuEngine;
 

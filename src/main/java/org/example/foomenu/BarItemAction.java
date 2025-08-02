@@ -1,7 +1,7 @@
 package org.example.foomenu;
 
 import org.example.menu.engine.MenuEngine;
-import org.example.menu.MenuItemAction;
+import org.example.menu.action.MenuItemAction;
 
 public class BarItemAction implements MenuItemAction {
     @Override

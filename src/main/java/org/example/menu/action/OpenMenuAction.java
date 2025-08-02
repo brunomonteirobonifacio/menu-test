@@ -1,6 +1,7 @@
-package org.example.menu;
+package org.example.menu.action;
 
 
+import org.example.menu.Menu;
 import org.example.menu.engine.MenuEngine;
 
 public class OpenMenuAction implements MenuItemAction {

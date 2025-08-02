@@ -3,7 +3,7 @@ package org.example.mainmenu;
 import org.example.foomenu.FooMenu;
 import org.example.menu.AbstractMenu;
 import org.example.menu.MenuItem;
-import org.example.menu.OpenMenuAction;
+import org.example.menu.action.OpenMenuAction;
 
 import java.util.List;
 

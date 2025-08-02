@@ -1,5 +1,6 @@
 package org.example.menu;
 
+import org.example.menu.action.ExitMenuAction;
 import org.example.menu.engine.MenuEngine;
 
 import java.util.*;
