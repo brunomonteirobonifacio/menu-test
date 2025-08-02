@@ -9,6 +9,7 @@ public class FooMenu extends AbstractMenu {
 
     @Override
     public List<MenuItem> getMenuItems() {
+    protected List<MenuItem> loadMenuItems() {
         return List.of(
                 new MenuItem("1", "Do bar", new BarItemAction()),
                 new MenuItem("2", "Do bar 2", new BarItemAction())
