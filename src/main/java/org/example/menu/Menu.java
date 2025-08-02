@@ -5,7 +5,8 @@ import org.example.menu.engine.MenuEngine;
 import java.util.List;
 
 public interface Menu {
-    void renderOptions();
+    String getMenuTitle();
+    List<MenuItem> getMenuItems();
     void selectOption(String option);
     void executeSelectedOption(MenuEngine menuEngine);
 }

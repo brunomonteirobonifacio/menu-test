@@ -8,7 +8,11 @@ import java.util.List;
 public class FooMenu extends AbstractMenu {
 
     @Override
-    public List<MenuItem> getMenuItems() {
+    public String getMenuTitle() {
+        return "Foo Menu";
+    }
+
+    @Override
     protected List<MenuItem> loadMenuItems() {
         return List.of(
                 new MenuItem("1", "Do bar", new BarItemAction()),
