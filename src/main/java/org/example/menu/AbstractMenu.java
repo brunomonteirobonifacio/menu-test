@@ -4,14 +4,14 @@ import org.example.menu.engine.MenuEngine;
 
 import java.util.*;
 
-public abstract class BaseMenu implements Menu {
+public abstract class AbstractMenu implements Menu {
     protected final Map<String, MenuItem> itemsByOption = new HashMap<>();
     protected final List<MenuItem> menuItems = new ArrayList<>();
     protected MenuItem selectedItem;
 
-    public BaseMenu() {
-        menuItems.addAll(getMenuItems());
-
+    public AbstractMenu() {
+        menuItems.addAll(loadMenuItems());
+        addExitAction();
         menuItems.forEach(i -> itemsByOption.put(i.getOption(), i));
     }
 
@@ -41,5 +41,5 @@ public abstract class BaseMenu implements Menu {
         }
     }
 
-    public abstract List<MenuItem> getMenuItems();
+    protected abstract List<MenuItem> loadMenuItems();
 }
