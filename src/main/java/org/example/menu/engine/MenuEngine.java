@@ -28,7 +28,13 @@ public class MenuEngine {
         while (!menuStack.isEmpty()) {
             Menu currentMenu = menuStack.peek();
 
-            System.out.println("\n=============== " + currentMenu.getMenuTitle() + " ===============");
+
+            String currentMenuTitle = currentMenu.getMenuTitle();
+            if (currentMenuTitle == null || currentMenuTitle.isEmpty()) {
+                System.out.println("\n==================================");
+            } else {
+                System.out.println("\n=============== " + currentMenuTitle + " ===============");
+            }
 
             for (MenuItem menuItem : currentMenu.getMenuItems()) {
                 System.out.printf("[ %s ] %s" + "\n", menuItem.getOption(), menuItem.getDescription());

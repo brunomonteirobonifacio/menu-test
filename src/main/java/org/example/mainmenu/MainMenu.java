@@ -1,5 +1,6 @@
 package org.example.mainmenu;
 
+import org.example.NoTitleMenu;
 import org.example.foomenu.FooMenu;
 import org.example.menu.AbstractMenu;
 import org.example.menu.MenuItem;
@@ -19,7 +20,8 @@ public class MainMenu extends AbstractMenu {
         return List.of(
                 new MenuItem("1", "Say Hello World", new HelloWorldItemAction()),
                 new MenuItem("2", "Say hi to mom", new HiMomItemAction()),
-                new MenuItem("3", "Open Foo Menu", new OpenMenuAction(new FooMenu()))
+                new MenuItem("3", "Open Foo Menu", new OpenMenuAction(new FooMenu())),
+                new MenuItem("4", "Open no title menu", new OpenMenuAction(new NoTitleMenu()))
         );
     }
 }
