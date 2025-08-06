@@ -1,7 +1,7 @@
-package org.example.menu;
+package io.github.brunomonteirobonifacio.simplemenu.menu;
 
-import org.example.menu.action.MenuItemAction;
-import org.example.menu.engine.MenuEngine;
+import io.github.brunomonteirobonifacio.simplemenu.menu.action.MenuItemAction;
+import io.github.brunomonteirobonifacio.simplemenu.menu.engine.MenuEngine;
 
 public class MenuItem {
     private final String option;

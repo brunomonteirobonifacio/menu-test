@@ -1,9 +1,12 @@
-package org.example.menu;
+package io.github.brunomonteirobonifacio.simplemenu.menu;
 
-import org.example.menu.action.ExitMenuAction;
-import org.example.menu.engine.MenuEngine;
+import io.github.brunomonteirobonifacio.simplemenu.menu.action.ExitMenuAction;
+import io.github.brunomonteirobonifacio.simplemenu.menu.engine.MenuEngine;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public abstract class AbstractMenu implements Menu {
     protected final Map<String, MenuItem> itemsByOption = new HashMap<>();

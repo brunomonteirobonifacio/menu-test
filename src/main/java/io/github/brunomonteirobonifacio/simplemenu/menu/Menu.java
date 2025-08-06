@@ -1,6 +1,6 @@
-package org.example.menu;
+package io.github.brunomonteirobonifacio.simplemenu.menu;
 
-import org.example.menu.engine.MenuEngine;
+import io.github.brunomonteirobonifacio.simplemenu.menu.engine.MenuEngine;
 
 import java.util.List;
 

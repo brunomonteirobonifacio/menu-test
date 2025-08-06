@@ -1,10 +1,10 @@
-package org.example.mainmenu;
+package io.github.brunomonteirobonifacio.simplemenu.mainmenu;
 
-import org.example.NoTitleMenu;
-import org.example.foomenu.FooMenu;
-import org.example.menu.AbstractMenu;
-import org.example.menu.MenuItem;
-import org.example.menu.action.OpenMenuAction;
+import io.github.brunomonteirobonifacio.simplemenu.notitlemenu.NoTitleMenu;
+import io.github.brunomonteirobonifacio.simplemenu.foomenu.FooMenu;
+import io.github.brunomonteirobonifacio.simplemenu.menu.AbstractMenu;
+import io.github.brunomonteirobonifacio.simplemenu.menu.MenuItem;
+import io.github.brunomonteirobonifacio.simplemenu.menu.action.OpenMenuAction;
 
 import java.util.List;
 

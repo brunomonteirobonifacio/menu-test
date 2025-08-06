@@ -1,6 +1,6 @@
-package org.example.menu.action;
+package io.github.brunomonteirobonifacio.simplemenu.menu.action;
 
-import org.example.menu.engine.MenuEngine;
+import io.github.brunomonteirobonifacio.simplemenu.menu.engine.MenuEngine;
 
 public class ExitMenuAction implements MenuItemAction {
 

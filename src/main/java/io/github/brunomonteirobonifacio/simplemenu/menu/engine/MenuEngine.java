@@ -1,7 +1,7 @@
-package org.example.menu.engine;
+package io.github.brunomonteirobonifacio.simplemenu.menu.engine;
 
-import org.example.menu.Menu;
-import org.example.menu.MenuItem;
+import io.github.brunomonteirobonifacio.simplemenu.menu.Menu;
+import io.github.brunomonteirobonifacio.simplemenu.menu.MenuItem;
 
 import java.util.Objects;
 import java.util.Scanner;

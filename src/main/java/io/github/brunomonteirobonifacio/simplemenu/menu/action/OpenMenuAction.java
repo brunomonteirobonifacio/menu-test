@@ -1,8 +1,8 @@
-package org.example.menu.action;
+package io.github.brunomonteirobonifacio.simplemenu.menu.action;
 
 
-import org.example.menu.Menu;
-import org.example.menu.engine.MenuEngine;
+import io.github.brunomonteirobonifacio.simplemenu.menu.Menu;
+import io.github.brunomonteirobonifacio.simplemenu.menu.engine.MenuEngine;
 
 public class OpenMenuAction implements MenuItemAction {
     private final Menu menuToOpen;
