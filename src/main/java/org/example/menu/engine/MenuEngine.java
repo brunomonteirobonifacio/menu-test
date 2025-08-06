@@ -40,7 +40,7 @@ public class MenuEngine {
                 System.out.printf("[ %s ] %s" + "\n", menuItem.getOption(), menuItem.getDescription());
             }
 
-            System.out.print("Select an option: ");
+            System.out.print(getOptionSelectionMessage());
 
             try {
                 currentMenu.selectOption(scanner.next());
@@ -49,5 +49,9 @@ public class MenuEngine {
                 System.out.println("An invalid option was selected.");
             }
         }
+    }
+
+    protected String getOptionSelectionMessage() {
+        return "Select an option: ";
     }
 }
