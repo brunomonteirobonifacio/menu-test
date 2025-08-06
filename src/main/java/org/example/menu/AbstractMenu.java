@@ -12,17 +12,21 @@ public abstract class AbstractMenu implements Menu {
 
     public AbstractMenu() {
         menuItems.addAll(loadMenuItems());
-        addExitOption();
+        addExitItem();
         menuItems.forEach(i -> itemsByOption.put(i.getOption(), i));
     }
 
-    private void addExitOption() {
+    private void addExitItem() {
         removeMenuItemWithSameOptionAsExit();
-        menuItems.add(new MenuItem("x", "Exit", new ExitMenuAction()));
+        menuItems.add(new MenuItem("x", getExitItemDescription(), new ExitMenuAction()));
     }
 
     private void removeMenuItemWithSameOptionAsExit() {
         menuItems.removeIf(item -> item.getOption().equalsIgnoreCase("x"));
+    }
+
+    protected String getExitItemDescription() {
+        return "Exit";
     }
 
     @Override
