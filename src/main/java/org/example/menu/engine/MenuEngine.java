@@ -29,17 +29,8 @@ public class MenuEngine {
         while (!menuStack.isEmpty()) {
             Menu currentMenu = menuStack.peek();
 
-
-            String currentMenuTitle = currentMenu.getMenuTitle();
-            if (currentMenuTitle == null || currentMenuTitle.isEmpty()) {
-                System.out.println("\n==================================");
-            } else {
-                System.out.println("\n=============== " + currentMenuTitle + " ===============");
-            }
-
-            for (MenuItem menuItem : currentMenu.getMenuItems()) {
-                System.out.printf("[ %s ] %s" + "\n", menuItem.getOption(), menuItem.getDescription());
-            }
+            printMenuTitle(currentMenu);
+            printMenuOptions(currentMenu);
 
             System.out.print(getOptionSelectionMessage());
 
@@ -50,6 +41,22 @@ public class MenuEngine {
                 System.out.println("An invalid option was selected.");
             }
         }
+    }
+
+    private void printMenuTitle(Menu menu) {
+        String menuTitle = menu.getMenuTitle();
+        if (menuTitle == null || menuTitle.isEmpty()) {
+            System.out.println("\n==================================");
+        } else {
+            System.out.println("\n=============== " + menuTitle + " ===============");
+        }
+    }
+
+    private void printMenuOptions(Menu menu) {
+        for (MenuItem menuItem : menu.getMenuItems()) {
+            System.out.printf("[ %s ] %s" + "\n", menuItem.getOption(), menuItem.getDescription());
+        }
+
     }
 
     protected String getOptionSelectionMessage() {
