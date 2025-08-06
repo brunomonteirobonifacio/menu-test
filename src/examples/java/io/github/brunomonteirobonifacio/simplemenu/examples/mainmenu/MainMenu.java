@@ -1,7 +1,7 @@
-package io.github.brunomonteirobonifacio.simplemenu.mainmenu;
+package io.github.brunomonteirobonifacio.simplemenu.examples.mainmenu;
 
-import io.github.brunomonteirobonifacio.simplemenu.notitlemenu.NoTitleMenu;
-import io.github.brunomonteirobonifacio.simplemenu.foomenu.FooMenu;
+import io.github.brunomonteirobonifacio.simplemenu.examples.foomenu.FooMenu;
+import io.github.brunomonteirobonifacio.simplemenu.examples.notitlemenu.NoTitleMenu;
 import io.github.brunomonteirobonifacio.simplemenu.menu.AbstractMenu;
 import io.github.brunomonteirobonifacio.simplemenu.menu.MenuItem;
 import io.github.brunomonteirobonifacio.simplemenu.menu.action.OpenMenuAction;

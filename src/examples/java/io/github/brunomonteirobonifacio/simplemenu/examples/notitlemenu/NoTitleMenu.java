@@ -1,4 +1,4 @@
-package io.github.brunomonteirobonifacio.simplemenu.notitlemenu;
+package io.github.brunomonteirobonifacio.simplemenu.examples.notitlemenu;
 
 import io.github.brunomonteirobonifacio.simplemenu.menu.AbstractMenu;
 import io.github.brunomonteirobonifacio.simplemenu.menu.MenuItem;

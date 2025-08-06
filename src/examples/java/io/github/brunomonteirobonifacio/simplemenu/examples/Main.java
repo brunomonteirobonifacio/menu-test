@@ -1,6 +1,6 @@
-package io.github.brunomonteirobonifacio.simplemenu;
+package io.github.brunomonteirobonifacio.simplemenu.examples;
 
-import io.github.brunomonteirobonifacio.simplemenu.mainmenu.MainMenu;
+import io.github.brunomonteirobonifacio.simplemenu.examples.mainmenu.MainMenu;
 import io.github.brunomonteirobonifacio.simplemenu.menu.engine.MenuEngine;
 
 public class Main {
