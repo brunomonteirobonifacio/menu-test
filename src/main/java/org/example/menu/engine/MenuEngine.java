@@ -3,6 +3,7 @@ package org.example.menu.engine;
 import org.example.menu.Menu;
 import org.example.menu.MenuItem;
 
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -11,11 +12,11 @@ public class MenuEngine {
     private final Scanner scanner = new Scanner(System.in);
 
     public MenuEngine(Menu initialMenu) {
-        menuStack.push(initialMenu);
+        menuStack.push(Objects.requireNonNull(initialMenu, "Initial menu cannot be null"));
     }
 
     public void navigateTo(Menu menu) {
-        menuStack.push(menu);
+        menuStack.push(Objects.requireNonNull(menu, "Menu to navigate to cannot be null"));
     }
 
     public void back() {
