@@ -36,6 +36,8 @@ public class MenuEngine {
 
             try {
                 currentMenu.selectOption(scanner.next());
+                scanner.nextLine();
+
                 currentMenu.executeSelectedOption(this);
             } catch (IllegalArgumentException e) {
                 System.out.println("An invalid option was selected.");
