@@ -62,4 +62,36 @@ public class MenuEngine {
     protected String getOptionSelectionMessage() {
         return "Select an option: ";
     }
+
+    public String promptString(String label) {
+        System.out.print(label);
+        return scanner.nextLine();
+    }
+
+    public int promptInt(String label) {
+        System.out.print(label);
+
+        int value = scanner.nextInt();
+        scanner.nextLine();
+
+        return value;
+    }
+
+    public double promptDouble(String label) {
+        System.out.print(label);
+
+        double value = scanner.nextDouble();
+        scanner.nextLine();
+
+        return value;
+    }
+
+    public float promptFloat(String label) {
+        System.out.print(label);
+
+        float value = scanner.nextFloat();
+        scanner.nextLine();
+
+        return value;
+    }
 }
