@@ -40,7 +40,7 @@ public class MenuEngine {
 
                 currentMenu.executeSelectedOption(this);
             } catch (IllegalArgumentException e) {
-                System.out.println("An invalid option was selected.");
+                System.out.println(getInvalidOptionSelectedMessage());
             }
         }
     }
@@ -63,6 +63,10 @@ public class MenuEngine {
 
     protected String getOptionSelectionMessage() {
         return "Select an option: ";
+    }
+
+    protected String getInvalidOptionSelectedMessage() {
+        return "An invalid option was selected.";
     }
 
     public String promptString(String label) {
