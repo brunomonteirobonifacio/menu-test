@@ -15,9 +15,4 @@ public class NoTitleMenu extends AbstractMenu {
                 })
         );
     }
-
-    @Override
-    protected String getExitItemDescription() {
-        return "Go back";
-    }
 }
