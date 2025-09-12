@@ -3,13 +3,26 @@ package io.github.brunomonteirobonifacio.simplemenu.menu.engine;
 import io.github.brunomonteirobonifacio.simplemenu.menu.Menu;
 import io.github.brunomonteirobonifacio.simplemenu.menu.MenuItem;
 
-import java.util.Objects;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class MenuEngine {
     private final Stack<Menu> menuStack = new Stack<>();
     private final Scanner scanner = new Scanner(System.in);
+    private static ResourceBundle bundle;
+
+    static {
+        loadResourceBundle();
+    }
+
+    private static void loadResourceBundle() {
+        if (bundle == null) {
+            try {
+                bundle = ResourceBundle.getBundle("menu");
+            } catch (MissingResourceException e) {
+                bundle = ResourceBundle.getBundle("menu", Locale.US);
+            }
+        }
+    }
 
     public MenuEngine(Menu initialMenu) {
         menuStack.push(Objects.requireNonNull(initialMenu, "Initial menu cannot be null"));
@@ -61,12 +74,12 @@ public class MenuEngine {
 
     }
 
-    protected String getOptionSelectionMessage() {
-        return "Select an option: ";
+    private String getOptionSelectionMessage() {
+        return bundle.getString("selectOptionLabel") + " ";
     }
 
-    protected String getInvalidOptionSelectedMessage() {
-        return "An invalid option was selected.";
+    private String getInvalidOptionSelectedMessage() {
+        return bundle.getString("invalidOptionSelectedLabel");
     }
 
     public String promptString(String label) {

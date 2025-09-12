@@ -3,20 +3,16 @@ package io.github.brunomonteirobonifacio.simplemenu.menu;
 import io.github.brunomonteirobonifacio.simplemenu.menu.action.ExitMenuAction;
 import io.github.brunomonteirobonifacio.simplemenu.menu.engine.MenuEngine;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public abstract class AbstractMenu implements Menu {
     protected final Map<String, MenuItem> itemsByOption = new HashMap<>();
     protected final List<MenuItem> menuItems = new ArrayList<>();
     protected MenuItem selectedItem;
+    private static ResourceBundle bundle;
 
-    public AbstractMenu() {
-        menuItems.addAll(loadMenuItems());
-        addExitItem();
-        menuItems.forEach(i -> itemsByOption.put(i.getOption(), i));
+    static {
+        loadResourceBundle();
     }
 
     private void addExitItem() {
@@ -24,12 +20,28 @@ public abstract class AbstractMenu implements Menu {
         menuItems.add(new MenuItem("x", getExitItemDescription(), new ExitMenuAction()));
     }
 
+    private static void loadResourceBundle() {
+        if (bundle == null) {
+            try {
+                bundle = ResourceBundle.getBundle("menu");
+            } catch (MissingResourceException e) {
+                bundle = ResourceBundle.getBundle("menu", Locale.US);
+            }
+        }
+    }
+
+    public AbstractMenu() {
+        menuItems.addAll(loadMenuItems());
+        addExitItem();
+        menuItems.forEach(i -> itemsByOption.put(i.getOption(), i));
+    }
+
     private void removeMenuItemWithSameOptionAsExit() {
         menuItems.removeIf(item -> item.getOption().equalsIgnoreCase("x"));
     }
 
-    protected String getExitItemDescription() {
-        return "Exit";
+    private String getExitItemDescription() {
+        return bundle.getString("exitLabel");
     }
 
     @Override
